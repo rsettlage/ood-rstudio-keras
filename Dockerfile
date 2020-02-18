@@ -75,6 +75,8 @@ RUN Rscript -e 'install.packages(Ncpus=6, c("reticulate","car","tidyverse","dply
   && /opt/TinyTeX/bin/*/tlmgr path add \
   && tlmgr install ae inconsolata listings metafont mfware parskip pdfcrop tex \
   && tlmgr path add \
+  && tlmgr install url harvard tools amsmath float ctable multirow eurosym graphics comment setspace enumitem \
+  && tlmgr path add \
   && Rscript -e "tinytex::r_texmf()" \
   && chown -R root:staff /opt/TinyTeX \
   && chown -R root:staff /usr/local/lib/R/site-library \
