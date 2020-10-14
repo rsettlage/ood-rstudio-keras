@@ -1,6 +1,6 @@
 ## combining the tidyverse and verse Dockerfiles, wanting to make sure I have the rstudio-r version
 
-FROM rsettlag/ood-rstudio-bio:4.0.0
+FROM rsettlag/ood-rstudio-bio:4.0.3
 
 LABEL org.label-schema.license="GPL-2.0" \
       org.label-schema.vcs-url="https://github.com/rsettlag" \
