@@ -14,7 +14,7 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 
 RUN echo "options(repos = c(CRAN='https://cran.rstudio.com'), download.file.method = 'libcurl')" >> /usr/local/lib/R/etc/Rprofile.site
 RUN Rscript -e "install.packages('tensorflow');library(tensorflow); \
-    install_tensorflow(method='conda');install.packages('keras')"
+    install_tensorflow(method='conda',version='cpu');install.packages('keras')"
 RUN apt-get clean
 RUN sed -i '/^R_LIBS_USER=/d' /usr/local/lib/R/etc/Renviron
 RUN echo 'R_ENVIRON=~/.Renviron.OOD \
